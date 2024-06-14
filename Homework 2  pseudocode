@@ -1,0 +1,205 @@
+// P.S.A. CONVERT ALL HARD CODE TO PSEUDOCODE!!!!!
+
+
+class Node <E>{
+        Node<E> link; //link to other nodes
+        int priority; //priority of the node
+        E data; //data inside each node
+
+        Node(E data, int priority) {
+
+        this.data = data;
+        this.priority = priority;
+        this.link = null
+        }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+      public class Generic<E> {
+//possibly abstract class
+//attributes
+        int ProcessID;
+        int PriorityNumber;
+        double ProcessArrivalTime;
+        double ProcessServiceTime;
+private int queueSize;
+
+Node<E> head;
+Node<E> tail;
+Node<E> next;
+
+
+
+class GenericQ {
+
+    // for adding a process to a priority queue data structure
+    public long enqueue(E data, int PriorityID, int PriorityNumber) {
+    //pass in attributes when making objects, which are the processes, in main
+
+        if (tail == null) {
+            head = new Node<E>(data);
+            tail = head;
+            return;
+        }
+        //if new node priority is greater than head(node) priority
+        if (PriorityNumber > head.priorityNumber) {
+
+            Node<E> temp = new Node<E>(data, PriorityNumber);   //create new node
+            temp.link = head;  //connect it to head and put new node at the front of the list
+            head = temp; // new node is now the head
+            return;
+        }
+        Node<E> current = head;
+
+        while (current!= tail && current.link.priority >= PriorityNumber) {
+            current = current.link;
+            //shifting current to next node
+
+        }
+        if (current == tail) {
+            Node<E> temp = new Node<E>(data);
+            tail.link = temp;//connects the tail's chain to the temp(new node(link in the chain))
+            tail = temp;//new node is now the tail
+            return;
+        }
+
+        Node<E> added = new Node<E>(data);
+        added.link = added.next;
+        added.link = added;
+        long arrival = System.nanoTime();
+    }
+
+
+
+}
+    public void dequeue(E data, ProcessID, PriorityNumber) {
+    //adjust parameters to OS specifications. What parameters need to be passed in for this process to work with processes in an Operating System?
+    //just removing the process
+      if (head == null) {
+                 return null;
+             } else {
+                 NodeQ<E> temp = head; //holding head while we try to remove it
+                 head = head.link; //head is now second node
+
+                 if (head == null) {
+                     tail = null;
+                 }
+
+                 return temp.data; // returning removed data
+
+             }
+         }
+
+         public void Reset_Priority(ProcessID, PriorityNumber) {
+Node <E> temp = head;
+                    if (head == null) {
+                        throw new RuntimeException();
+                    }
+
+                    if (index < 0) {
+                        throw new RuntimeException();
+                    }
+                    for (int i = 0; i < index; i++) {
+                        temp = temp.next;
+                    }
+
+                    Node <E> get = temp.next;
+                    get.PriorityNumber = 0;
+                    return get.data;
+           }
+
+           public long Waiting_Time(E Process) {
+             //not needed necessariy since passing in a node Node<E> WaitQ = new Node<E>(ProcessID, PriorityNumber);
+             long SystemTime = System.nanoTime();
+            Enqueue(WaitQ.ProcessID, WaitQ.PriorityNumber);
+            long wait = SystemTime - WaitQ.arrival;
+
+           }
+
+           public void CPU_Running() {
+           if (head == null) {
+           return null;
+           } else {
+             NodeQ<E> temp = head; //holding head while we try to remove it
+                        head = head.link; //head is now second node
+
+                        if (head == null) {
+                            tail = null;
+                        }
+
+
+           }
+           long clock = currentSystemTime; //tracks current time(e.g. it is now 2:40 p.m.)
+           //keep all units the same
+           long processServiceTime =
+           clock = temp.process.ProcessServiceTime + clock /*gets the process in temp, since process
+           is inside of node, then gets process service time, which is retrieved from process, and then
+           adds it to clock, which will give us the time the CPU was running. Tells us the time after
+           servicing that process.
+
+
+
+           }
+
+
+           }
+           public Time_In-System(E Process) {
+
+
+            Total_Time(ProcessID, Process service time);
+                                     long timeEnd = System.nanoTime();
+                                     //starts at the same time that start time does so that the subtraction can produce the exact time the process was running in the system.
+                                     long timeStart = System.nanoTime();
+                                     long serviceTime = timeEnd - timeStart;
+//scratch that. this method needs to add waiting time and running time.
+long Total_Time = Waiting_Time(ProcessID, ProcessArrivalTime) + CPU_Running(ProcessID);
+
+           }
+
+           Main {
+
+           // use Node.Process to pass in the process to the methods
+           the process is inside the node so pass in the node
+           }
+
+    }
+
+Reset Priority redo(ProcessID, PriorityNumber) {
+
+  int index = 0;
+        if (pCollect.getFirst() == null) {
+            throw new RuntimeException();
+        }
+
+        if (pCollect.index < 0) {
+            throw new RuntimeException();
+        }
+        for (int i = 0; i < index; i++) {
+            //temp = temp.next;
+            pCollect.addFirst(ProcessID, PriorityNumber);
+            //trying to add a new node
+        }
+
+
+        //creating a link to the next node
+        pCollect.set(ProcessID, PriorityNumber);
+
+       return pCollect.peek();
+
+
+
+
+
+}
+
